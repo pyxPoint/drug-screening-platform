@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Online Inquiry</title>
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/public.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+<div class="virus_headerobj"></div>
+
+<div class="nomain-banner">
+    <img src="../images/nomain-banner.jpg" alt="about-banner">
+
+    <div class="nomain-banner-mess">
+        <h2>Online Inquiry</h2>
+    </div>
+</div>
+<ul class="breadcrumb container">
+    <li><a href="" class="fa fa-home">&nbsp;Home</a></li>
+    <li><a href="">&nbsp;Online Inquiry</a></li>
+</ul>
+<div class="nomain-content container">
+
+    <div class="nomain-inquiry">
+        <h2>Online Inquiry</h2>
+        <form class="inquiry-form">
+            <div class="row-layout">
+                <div>
+                    <label>*Name:</label>
+                    <input type="text" placeholder="Name:">
+                </div>
+                <div>
+                    <label>*E-mail:</label>
+                    <input type="text" placeholder="E-mail:">
+                </div>
+            </div>
+            <div class="row-layout">
+                <div>
+                    <label>*Phone:</label>
+                    <input type="text" placeholder="Phone:">
+                </div>
+                <div>
+                    <label>*Products/Services Interested:</label>
+                    <input type="text" placeholder="Products/Services Interested:">
+                </div>
+            </div>
+            <label>Project Description:</label>
+            <textarea rows="4"  placeholder="Project Description:"></textarea>
+            <label>*Verification Code:</label>
+            <input type="text" placeholder="Please input 'CD BioSciences' here" >
+            <button class="circle-style-btn">
+                <span>SUBMIT</span>
+                <svg viewBox="0 0 26 15.6" preserveAspectRatio="none">
+                    <g >
+                        <circle class="left" cx="8" cy="8" r="18"/>
+                        <circle class="right" cx="14" cy="4" r="18"/>
+                    </g>
+                </svg>
+            </button>
+        </form>
+    </div>
+</div>
+<div class="virus_footer">
+</div>
+<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        let htmlobj = $.ajax({
+            url: "../html/footer.html",
+            async: false
+        });
+        $(".virus_footer").html(htmlobj.responseText);
+        let headerhtml=$.ajax({
+            url:"../html/header.html",
+            async: false
+        });
+        $(".virus_headerobj").html(headerhtml.responseText);
+    });
+</script>
+<script type="text/javascript" src="../js/breeding.js?v=1.6"></script>
+</body>
+</html>
